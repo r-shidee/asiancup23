@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+}
+
+/* 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+} */
+
+body {
+    color: rgb(var(--foreground-rgb));
+    /* background: linear-gradient(
+			to bottom,
+			transparent,
+			rgb(var(--background-end-rgb))
+		)
+		rgb(var(--background-start-rgb)); */
+}
+
+@function isColorDark($color ) {
+    // Parse RGB by isolating each color
+    $red: red($color );
+    $green: green($color );
+    $blue: blue($color );
+    // Compute the perceptive luminance, keeping
+    // in mind that the human eye favors green.
+    $l: 1 - (0.299 * $red + 0.587 * $green + 0.114 * $blue ) / 255;
+
+    /* arguably this should be 0.50, but testing out various colors, this seemed to be the best so far. */
+    @if ($l < 0.41) {
+        // if the luminance is less than 0.5 return black
+        @return #000000;
+    }
+
+    @else {
+        // if the luminance is more than 0.5 return white
+        @return #ffffff;
+    }
+}
+
+$fdr: (
+    "1": #00FF87,
+    "2": #72FF45,
+    "3": #E4FE02,
+    "4": #F28034,
+    "5": #FF0166,
+);
+
+@each $fdr,
+$color in $fdr {
+    .fixture--level-#{$fdr} {
+        background-color: $color;
+        color: isColorDark($color);
+    }
+}
+
+
+$clubs: (
+    "AUS": #004044,
+    "BHR": #fc0000,
+    "CHN": #fc0000,
+    "HKG": #c90000,
+    "IND": #010eeb,
+    "IDN": #b90b22,
+    "IRQ": #297546,
+    "IRN": #E11C23,
+    "JPN": #020372,
+    "JOR": #CE0020,
+    "KOR": #F9041D,
+    "KGZ": #fc0100,
+    "LBN": #fc0000,
+    "MAS": #000000,
+    "OMA": #f90400,
+    "PLE": #fc0000,
+    "QAT": #800000,
+    "KSA": #216A3C,
+    "SYR": #f90100,
+    "TJK": #096034,
+    "THA": #e70e1f,
+    "UAE": #C91C30,
+    "UZB": #132880,
+    "VIE": #d1020f,
+);
+
+
+@each $club,
+$color in $clubs {
+
+    .card--#{$club} .card__header {
+        border-bottom: 4px solid;
+        border-color: $color;
+        // color: isColorDark($color);
+        // background: linear-gradient(to right, $color, mix(white, $color, 20%));
+    }
+
+
+    .card--#{$club} .card__club {
+        -webkit-text-stroke: 1px isColorDark($color);
+        font-size: 20px;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .player--#{$club} {
+        background-color: $color;
+        color: isColorDark($color);
+        // background-color: linear-gradient(110deg, $color, mix(white, $color, 20%)25%, $color 50%, mix(white, $color, 20%));
+
+    }
+
+    .club--#{$club} {
+        color: isColorDark($color);
+        background: $color;
+        // background: repeating-linear-gradient(135deg, $color, mix(white, $color, 20%) 10%);
+        ;
+
+    }
+}

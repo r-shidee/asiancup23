@@ -1,27 +1,555 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
 
+/* 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
-
+} */
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  /* background: linear-gradient(
+  	to bottom,
+  	transparent,
+  	rgb(var(--background-end-rgb))
+  )
+  rgb(var(--background-start-rgb)); */
 }
+
+.fixture--level-1 {
+  background-color: #00FF87;
+  color: #000000;
+}
+
+.fixture--level-2 {
+  background-color: #72FF45;
+  color: #000000;
+}
+
+.fixture--level-3 {
+  background-color: #E4FE02;
+  color: #000000;
+}
+
+.fixture--level-4 {
+  background-color: #F28034;
+  color: #000000;
+}
+
+.fixture--level-5 {
+  background-color: #FF0166;
+  color: #ffffff;
+}
+
+.card--AUS .card__header {
+  border-bottom: 4px solid;
+  border-color: #004044;
+}
+
+.card--AUS .card__club {
+  -webkit-text-stroke: 1px #ffffff;
+  font-size: 20px;
+  -webkit-text-fill-color: transparent;
+}
+
+.player--AUS {
+  background-color: #004044;
+  color: #ffffff;
+}
+
+.club--AUS {
+  color: #ffffff;
+  background: #004044;
+}
+
+.card--BHR .card__header {
+  border-bottom: 4px solid;
+  border-color: #fc0000;
+}
+
+.card--BHR .card__club {
+  -webkit-text-stroke: 1px #ffffff;
+  font-size: 20px;
+  -webkit-text-fill-color: transparent;
+}
+
+.player--BHR {
+  background-color: #fc0000;
+  color: #ffffff;
+}
+
+.club--BHR {
+  color: #ffffff;
+  background: #fc0000;
+}
+
+.card--CHN .card__header {
+  border-bottom: 4px solid;
+  border-color: #fc0000;
+}
+
+.card--CHN .card__club {
+  -webkit-text-stroke: 1px #ffffff;
+  font-size: 20px;
+  -webkit-text-fill-color: transparent;
+}
+
+.player--CHN {
+  background-color: #fc0000;
+  color: #ffffff;
+}
+
+.club--CHN {
+  color: #ffffff;
+  background: #fc0000;
+}
+
+.card--HKG .card__header {
+  border-bottom: 4px solid;
+  border-color: #c90000;
+}
+
+.card--HKG .card__club {
+  -webkit-text-stroke: 1px #ffffff;
+  font-size: 20px;
+  -webkit-text-fill-color: transparent;
+}
+
+.player--HKG {
+  background-color: #c90000;
+  color: #ffffff;
+}
+
+.club--HKG {
+  color: #ffffff;
+  background: #c90000;
+}
+
+.card--IND .card__header {
+  border-bottom: 4px solid;
+  border-color: #010eeb;
+}
+
+.card--IND .card__club {
+  -webkit-text-stroke: 1px #ffffff;
+  font-size: 20px;
+  -webkit-text-fill-color: transparent;
+}
+
+.player--IND {
+  background-color: #010eeb;
+  color: #ffffff;
+}
+
+.club--IND {
+  color: #ffffff;
+  background: #010eeb;
+}
+
+.card--IDN .card__header {
+  border-bottom: 4px solid;
+  border-color: #b90b22;
+}
+
+.card--IDN .card__club {
+  -webkit-text-stroke: 1px #ffffff;
+  font-size: 20px;
+  -webkit-text-fill-color: transparent;
+}
+
+.player--IDN {
+  background-color: #b90b22;
+  color: #ffffff;
+}
+
+.club--IDN {
+  color: #ffffff;
+  background: #b90b22;
+}
+
+.card--IRQ .card__header {
+  border-bottom: 4px solid;
+  border-color: #297546;
+}
+
+.card--IRQ .card__club {
+  -webkit-text-stroke: 1px #ffffff;
+  font-size: 20px;
+  -webkit-text-fill-color: transparent;
+}
+
+.player--IRQ {
+  background-color: #297546;
+  color: #ffffff;
+}
+
+.club--IRQ {
+  color: #ffffff;
+  background: #297546;
+}
+
+.card--IRN .card__header {
+  border-bottom: 4px solid;
+  border-color: #E11C23;
+}
+
+.card--IRN .card__club {
+  -webkit-text-stroke: 1px #ffffff;
+  font-size: 20px;
+  -webkit-text-fill-color: transparent;
+}
+
+.player--IRN {
+  background-color: #E11C23;
+  color: #ffffff;
+}
+
+.club--IRN {
+  color: #ffffff;
+  background: #E11C23;
+}
+
+.card--JPN .card__header {
+  border-bottom: 4px solid;
+  border-color: #020372;
+}
+
+.card--JPN .card__club {
+  -webkit-text-stroke: 1px #ffffff;
+  font-size: 20px;
+  -webkit-text-fill-color: transparent;
+}
+
+.player--JPN {
+  background-color: #020372;
+  color: #ffffff;
+}
+
+.club--JPN {
+  color: #ffffff;
+  background: #020372;
+}
+
+.card--JOR .card__header {
+  border-bottom: 4px solid;
+  border-color: #CE0020;
+}
+
+.card--JOR .card__club {
+  -webkit-text-stroke: 1px #ffffff;
+  font-size: 20px;
+  -webkit-text-fill-color: transparent;
+}
+
+.player--JOR {
+  background-color: #CE0020;
+  color: #ffffff;
+}
+
+.club--JOR {
+  color: #ffffff;
+  background: #CE0020;
+}
+
+.card--KOR .card__header {
+  border-bottom: 4px solid;
+  border-color: #F9041D;
+}
+
+.card--KOR .card__club {
+  -webkit-text-stroke: 1px #ffffff;
+  font-size: 20px;
+  -webkit-text-fill-color: transparent;
+}
+
+.player--KOR {
+  background-color: #F9041D;
+  color: #ffffff;
+}
+
+.club--KOR {
+  color: #ffffff;
+  background: #F9041D;
+}
+
+.card--KGZ .card__header {
+  border-bottom: 4px solid;
+  border-color: #fc0100;
+}
+
+.card--KGZ .card__club {
+  -webkit-text-stroke: 1px #ffffff;
+  font-size: 20px;
+  -webkit-text-fill-color: transparent;
+}
+
+.player--KGZ {
+  background-color: #fc0100;
+  color: #ffffff;
+}
+
+.club--KGZ {
+  color: #ffffff;
+  background: #fc0100;
+}
+
+.card--LBN .card__header {
+  border-bottom: 4px solid;
+  border-color: #fc0000;
+}
+
+.card--LBN .card__club {
+  -webkit-text-stroke: 1px #ffffff;
+  font-size: 20px;
+  -webkit-text-fill-color: transparent;
+}
+
+.player--LBN {
+  background-color: #fc0000;
+  color: #ffffff;
+}
+
+.club--LBN {
+  color: #ffffff;
+  background: #fc0000;
+}
+
+.card--MAS .card__header {
+  border-bottom: 4px solid;
+  border-color: #000000;
+}
+
+.card--MAS .card__club {
+  -webkit-text-stroke: 1px #ffffff;
+  font-size: 20px;
+  -webkit-text-fill-color: transparent;
+}
+
+.player--MAS {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.club--MAS {
+  color: #ffffff;
+  background: #000000;
+}
+
+.card--OMA .card__header {
+  border-bottom: 4px solid;
+  border-color: #f90400;
+}
+
+.card--OMA .card__club {
+  -webkit-text-stroke: 1px #ffffff;
+  font-size: 20px;
+  -webkit-text-fill-color: transparent;
+}
+
+.player--OMA {
+  background-color: #f90400;
+  color: #ffffff;
+}
+
+.club--OMA {
+  color: #ffffff;
+  background: #f90400;
+}
+
+.card--PLE .card__header {
+  border-bottom: 4px solid;
+  border-color: #fc0000;
+}
+
+.card--PLE .card__club {
+  -webkit-text-stroke: 1px #ffffff;
+  font-size: 20px;
+  -webkit-text-fill-color: transparent;
+}
+
+.player--PLE {
+  background-color: #fc0000;
+  color: #ffffff;
+}
+
+.club--PLE {
+  color: #ffffff;
+  background: #fc0000;
+}
+
+.card--QAT .card__header {
+  border-bottom: 4px solid;
+  border-color: #800000;
+}
+
+.card--QAT .card__club {
+  -webkit-text-stroke: 1px #ffffff;
+  font-size: 20px;
+  -webkit-text-fill-color: transparent;
+}
+
+.player--QAT {
+  background-color: #800000;
+  color: #ffffff;
+}
+
+.club--QAT {
+  color: #ffffff;
+  background: #800000;
+}
+
+.card--KSA .card__header {
+  border-bottom: 4px solid;
+  border-color: #216A3C;
+}
+
+.card--KSA .card__club {
+  -webkit-text-stroke: 1px #ffffff;
+  font-size: 20px;
+  -webkit-text-fill-color: transparent;
+}
+
+.player--KSA {
+  background-color: #216A3C;
+  color: #ffffff;
+}
+
+.club--KSA {
+  color: #ffffff;
+  background: #216A3C;
+}
+
+.card--SYR .card__header {
+  border-bottom: 4px solid;
+  border-color: #f90100;
+}
+
+.card--SYR .card__club {
+  -webkit-text-stroke: 1px #ffffff;
+  font-size: 20px;
+  -webkit-text-fill-color: transparent;
+}
+
+.player--SYR {
+  background-color: #f90100;
+  color: #ffffff;
+}
+
+.club--SYR {
+  color: #ffffff;
+  background: #f90100;
+}
+
+.card--TJK .card__header {
+  border-bottom: 4px solid;
+  border-color: #096034;
+}
+
+.card--TJK .card__club {
+  -webkit-text-stroke: 1px #ffffff;
+  font-size: 20px;
+  -webkit-text-fill-color: transparent;
+}
+
+.player--TJK {
+  background-color: #096034;
+  color: #ffffff;
+}
+
+.club--TJK {
+  color: #ffffff;
+  background: #096034;
+}
+
+.card--THA .card__header {
+  border-bottom: 4px solid;
+  border-color: #e70e1f;
+}
+
+.card--THA .card__club {
+  -webkit-text-stroke: 1px #ffffff;
+  font-size: 20px;
+  -webkit-text-fill-color: transparent;
+}
+
+.player--THA {
+  background-color: #e70e1f;
+  color: #ffffff;
+}
+
+.club--THA {
+  color: #ffffff;
+  background: #e70e1f;
+}
+
+.card--UAE .card__header {
+  border-bottom: 4px solid;
+  border-color: #C91C30;
+}
+
+.card--UAE .card__club {
+  -webkit-text-stroke: 1px #ffffff;
+  font-size: 20px;
+  -webkit-text-fill-color: transparent;
+}
+
+.player--UAE {
+  background-color: #C91C30;
+  color: #ffffff;
+}
+
+.club--UAE {
+  color: #ffffff;
+  background: #C91C30;
+}
+
+.card--UZB .card__header {
+  border-bottom: 4px solid;
+  border-color: #132880;
+}
+
+.card--UZB .card__club {
+  -webkit-text-stroke: 1px #ffffff;
+  font-size: 20px;
+  -webkit-text-fill-color: transparent;
+}
+
+.player--UZB {
+  background-color: #132880;
+  color: #ffffff;
+}
+
+.club--UZB {
+  color: #ffffff;
+  background: #132880;
+}
+
+.card--VIE .card__header {
+  border-bottom: 4px solid;
+  border-color: #d1020f;
+}
+
+.card--VIE .card__club {
+  -webkit-text-stroke: 1px #ffffff;
+  font-size: 20px;
+  -webkit-text-fill-color: transparent;
+}
+
+.player--VIE {
+  background-color: #d1020f;
+  color: #ffffff;
+}
+
+.club--VIE {
+  color: #ffffff;
+  background: #d1020f;
+}/*# sourceMappingURL=globals.css.map */
